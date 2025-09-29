@@ -2,7 +2,7 @@
 
 ##### 
 
-##### **About the Portfolio Repository**
+#### **About the Portfolio Repository**
 
 
 
@@ -28,7 +28,7 @@ More will be uploaded gradually.
 
 
 
-##### **ポートフォリオリポジトリについて**
+#### **ポートフォリオリポジトリについて**
 
 このリポジトリは、大学および個人で取り組んだソフトウェア開発プロジェクトをまとめたポートフォリオです。
 
@@ -47,6 +47,4 @@ More will be uploaded gradually.
 
 
 徐々に上げる予定です。
-
-
 
