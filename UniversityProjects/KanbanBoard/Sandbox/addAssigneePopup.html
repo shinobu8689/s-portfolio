@@ -1,0 +1,79 @@
+<html>
+
+    <head>
+        <title>Add Assignee</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="scripts/shared.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/member.js"></script>
+        <script src="scripts/memberStorage.js"></script>
+        <script src="scripts/kanbanStorage.js"></script>
+        <script src="scripts/kanban.js"></script>
+        <link href="styles/popup-small.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+
+        <style>
+            .demo-layout-transparent {
+                background: url('https://external-preview.redd.it/e_WvRTzU3h8NRiSkXxtrDzSxL89fFBwXiSA-wTmvSCI.png?auto=webp&s=763b39be53f75339c6e7a95911345175709d2800') center / cover;
+            }
+
+            .demo-layout-transparent .mdl-layout__header,
+            .demo-layout-transparent .mdl-layout__drawer-button {
+                /* This background is dark, so we set text to white. */
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body onload="getMember()">
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Kanban Board</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="productBacklog.html">Product Backlog</a>
+                    <a class="mdl-navigation__link" href="kanbanBoard.html"><b>Kanban Board</b></a>
+                    <a class="mdl-navigation__link" href="burndownChart.html">Burndown Chart</a>
+                    <a class="mdl-navigation__link" href="./memberPage.html">Member Management</a>
+                    <a class="mdl-navigation__link" href="pastSprints.html">View Past Sprints</a>
+                </nav>
+            </div>
+            <!-- Uses a transparent header that draws on top of the layout's background -->
+            <div class="tab-form">
+                <div class="tab-body">
+                    <div class="signup active">
+                        <h2> Set Assignee </h2>
+                        <div class="form-input">
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+                                
+                                <section class="task_assignee">
+                                    <label for="task_assignee">Assignee:</label>
+                                    <select name="task_assignee" id="task_assignee">
+                                    </select>
+                                </section>
+                                <hr>
+
+                                <section class="submission">
+                                    <div class="form-input1">
+                                        <button onclick="setMember()"> Confirm </button>
+                                    </div>
+                                </section>
+                                <section class="cancel">
+                                    <div class="form-input2">
+                                        <button onclick="returnToKanban()"> Cancel </button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/member.js"></script>
+        <script src="scripts/memberStorage.js"></script>
+        <script src="scripts/shared.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>

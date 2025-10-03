@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="scripts/memberStorage.js"></script>
+    <script src="scripts/member.js"></script>
+    <script src="scripts/timeTracking.js"></script>
+    <link href="styles/style.css" rel="stylesheet">
+    <title>Member Management</title>
+
+    <!-- Uses a transparent header that draws on top of the layout's background -->
+    <style>
+        .background {
+            background-color: darkslategray;
+            color: white;
+            min-height: 100%;
+        }
+
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+            /* This background is dark, so we set text to white. */
+            color: white;
+        }
+
+        .demo-card.mdl-card {
+            width: 312px;
+            height: 50px;
+        }
+        .demo-card > .mdl-card__title {
+            color: rgb(255, 255, 255);
+            height: 64px;
+            background: rgb(66, 66, 66);
+        }
+        .demo-card-wide > .mdl-card__menu {
+            color: rgb(255, 255, 255);
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="background">
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Kanban Board</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="productBacklog.html">Product Backlog</a>
+                    <a class="mdl-navigation__link" href="kanbanBoard.html">Kanban Board</a>
+                    <a class="mdl-navigation__link" href="./burndownChart.html">Burndown Chart</a>
+                    <a class="mdl-navigation__link" href="./memberPage.html"><b>Member Management</b></a>
+                    <a class="mdl-navigation__link" href="pastSprints.html">View Past Sprints</a>
+
+                </nav>
+            </div>
+        </div>
+
+
+        <main class="mdl-layout__content">
+            <div class="mdl-grid">
+                <div class="mdl-cell mdl-cell--1-col"></div>
+                <div class="mdl-cell mdl-cell--4-col"></div>
+                <div class="mdl-cell mdl-cell--4-col"></div>    
+              </div>
+            
+            <button id="mybutton" onclick="openMemberPopUp()"
+                class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored" title="Add task">
+                <i class="material-icons">add</i>
+            </button>
+        </main>
+
+        <div class="mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col"></div>
+            <div class="mdl-cell mdl-cell--3-col">
+                <h4 style="font-weight: bold; color: white">Time Tracking</h4>
+                <b>Enter dates to calculate the average time tracked each day per person for the team</b>
+
+                <div class="form-input">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+
+                        <section class="team-avg-start">
+                            <label for="team-avg-start">Start Date:</label>
+                            <input type="date" name="team-avg-start" id="team-avg-start" placeholder="dd/mm/yyyy">
+                        </section>
+                        <hr>
+
+                        <section class="team-avg-end">
+                            <label for="team-avg-end">End Date:</label>
+                            <input type="date" name="team-avg-end" id="team-avg-end" placeholder="dd/mm/yyyy">
+                        </section>
+                        <hr>
+
+                        <section class="submission">
+                            <div class="form-input1">
+                                <button onclick="averageTime()">Calculate</button>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <div class="mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col"></div>
+          <div class="mdl-cell mdl-cell--3-col">
+            <h4 style="font-weight: bold; color: white">Member List</h4>
+            <div id="member_list"></div>
+          </div>
+        </div>
+      </div>
+
+</body>
+
+<script src="scripts/memberStorage.js"></script>
+<script src="scripts/member.js"></script>
+
+</html>

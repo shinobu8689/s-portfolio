@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>Create Task</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="scripts/memberStorage.js"></script>
+    <link href="styles/popup-small.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <style>
+        .demo-layout-transparent {
+            background-color: #00183E;
+        }
+
+        .demo-layout-transparent .mdl-layout__header,
+        .demo-layout-transparent .mdl-layout__drawer-button {
+            /* This background is dark, so we set text to white. */
+            color: white;
+        }
+    </style>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Member List</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="productBacklog.html">Product Backlog</a>
+                <a class="mdl-navigation__link" href="kanbanBoard.html">Kanban Board</a>
+                <a class="mdl-navigation__link" href="./burndownChart.html">Burndown Chart</a>
+                <a class="mdl-navigation__link" href="./memberPage.html"><b>Member Management</b></a>
+                <a class="mdl-navigation__link" href="pastSprints.html">View Past Sprints</a>
+
+            </nav>
+        </div>
+        <!-- Uses a transparent header that draws on top of the layout's background -->
+        <div class="tab-form">
+            <div class="tab-body">
+                <div class="signup active">
+                    <h2> Add New Member </h2>
+                    <div class="form-input">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+                            <section class="member_name">
+                                <label for="member_name">Name:</label>
+                                <input type="text" name="member_name" id="member_name">
+                            </section>
+                            <hr>
+
+                            <section class="member_email">
+                                <label for="member_email">Email:</label>
+                                <input type="text" name="member_email" id="member_email">
+                            </section>
+                            <hr>
+
+                            <section class="submission">
+                                <div class="form-input1">
+                                    <button onclick="createMember()"> Add </button>
+                                </div>
+                            </section>
+                            <section class="cancel">
+                                <div class="form-input2">
+                                    <button onclick="cancel()"> Cancel </button>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/memberStorage.js"></script>
+    <script src="scripts/member.js"></script>
+</body>
+
+</html>

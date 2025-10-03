@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Product Backlog</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="scripts/shared.js"></script>
+        <script src="scripts/memberStorage.js"></script>
+        <script src="scripts/sprintBoardStorage.js"></script>
+        <script src="scripts/kanbanStorage.js"></script>
+        <script src="scripts/kanban.js"></script>
+        <script src="scripts/main.js"></script>
+        <link href="styles/popup-small.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+
+        <style>
+            .background {
+                background-image: url('https://external-preview.redd.it/e_WvRTzU3h8NRiSkXxtrDzSxL89fFBwXiSA-wTmvSCI.png?auto=webp&s=763b39be53f75339c6e7a95911345175709d2800');
+                background-size: cover;
+                min-height: 100%;
+            }
+
+            .demo-layout-transparent .mdl-layout__header,
+            .demo-layout-transparent .mdl-layout__drawer-button {
+                /* This background is dark, so we set text to white. */
+                color: white;
+            }
+
+            .demo-card.mdl-card {
+                width: 312px;
+                height: 250px;
+            }
+            .demo-card > .mdl-card__title {
+                color: rgb(255, 255, 255);
+                height: 64px;
+                background: rgb(66, 66, 66);
+            }
+            .demo-card-wide > .mdl-card__menu {
+                color: rgb(255, 255, 255);
+            }
+        </style>
+    </head>
+
+<body>
+    <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+        <div class="mdl-layout__drawer">
+            <span class="mdl-layout-title">Product Backlog</span>
+            <nav class="mdl-navigation">
+                <a class="mdl-navigation__link" href="productBacklog.html"><b>Product Backlog</b></a>
+                <a class="mdl-navigation__link" href="kanbanBoard.html">Kanban Board</a>
+                <a class="mdl-navigation__link" href="./burndownChart.html">Burndown Chart</a>
+                <a class="mdl-navigation__link" href="./memberPage.html">Member Management</a>
+                <a class="mdl-navigation__link" href="pastSprints.html">View Past Sprints</a>
+
+            </nav>
+        </div>
+
+        <!-- Uses a transparent header that draws on top of the layout's background -->
+        <div class="tab-form">
+            <div class="tab-body">
+                <div class="signup active">
+                    <h2>Sprint Details</h2>
+                    <div class="form-input">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+
+                            <section class="sprint-title">
+                                <label for="sprint-title">Sprint Title:</label>
+                                <input type="text" name="sprint-title" id="sprint-title">
+                            </section>
+                            <hr>
+
+                            <section class="sprint-start">
+                                <label for="sprint-start">Sprint Start Date:</label>
+                                <input type="date" name="sprint-start" id="sprint-start" placeholder="dd/mm/yyyy">
+                            </section>
+                            <hr>
+
+                            <section class="sprint-end">
+                                <label for="sprint-end">Sprint End Date:</label>
+                                <input type="date" name="sprint-end" id="sprint-end" placeholder="dd/mm/yyyy">
+                            </section>
+                            <hr>
+
+                            <section class="submission">
+                                <div class="form-input1">
+                                    <button onclick="startSprint()">Start</button>
+                                </div>
+                            </section>
+
+<!--                            FIXME: Cancel button not working-->
+                            <section class="cancel">
+                                <div class="form-input2">
+                                    <button onclick="returnBacklog()"> Cancel </button>
+                                </div>
+                            </section>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/memberStorage.js"></script>
+    <script src="scripts/member.js"></script>
+    <script src="scripts/kanban.js"></script>
+    <script src = "scripts/main.js"></script>
+    <script src = "scripts/endedSprint.js"></script>
+</body>
+
+</html>

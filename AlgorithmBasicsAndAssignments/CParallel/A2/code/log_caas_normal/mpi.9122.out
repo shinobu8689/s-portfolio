@@ -1,0 +1,78 @@
+GRID:
+1  2  3  
+4  5  6  
+
+T	SRC	SD/RV	TYPE		DEST	INF
+======================================================================
+5	Base	recv	UPDATE		N1	vacancy: 5
+5	Base	recv	UPDATE		N2	vacancy: 3
+5	Base	recv	UPDATE		N3	vacancy: 3
+5	Base	recv	UPDATE		N4	vacancy: 1
+5	Base	recv	UPDATE		N5	vacancy: 2
+5	Base	recv	UPDATE		N6	vacancy: 2
+10	Base	recv	UPDATE		N1	vacancy: 1
+10	Base	recv	UPDATE		N2	vacancy: 3
+10	Base	recv	UPDATE		N3	vacancy: 4
+10	Base	recv	UPDATE		N4	vacancy: 5
+10	Base	recv	UPDATE		N5	vacancy: 1
+10	Base	recv	UPDATE		N6	vacancy: 4
+10	Base	send	TERMINATE	N1
+10	Base	recv	TOTAL_MSG	N1	36
+10	Base	send	TERMINATE	N2
+10	Base	recv	TOTAL_MSG	N2	50
+10	Base	send	TERMINATE	N3
+10	Base	recv	TOTAL_MSG	N3	36
+10	Base	send	TERMINATE	N4
+10	Base	recv	TOTAL_MSG	N4	36
+10	Base	send	TERMINATE	N5
+10	Base	recv	TOTAL_MSG	N5	46
+10	Base	send	TERMINATE	N6
+10	Base	recv	TOTAL_MSG	N6	39
+8	N1	vacancy: 0
+8	N1	recv	N4	vacancy: 1
+8	N1	recv	N2	vacancy: 3
+N1 Terminates.
+1	N2	vacancy: 0
+1	N2	recv	N5	vacancy: 1
+1	N2	recv	N1	vacancy: 1
+1	N2	recv	N3	vacancy: 0
+6	N2	vacancy: 0
+6	N2	recv	N5	vacancy: 4
+6	N2	recv	N1	vacancy: 1
+6	N2	recv	N3	vacancy: 4
+7	N2	vacancy: 0
+7	N2	recv	N5	vacancy: 2
+7	N2	recv	N1	vacancy: 4
+7	N2	recv	N3	vacancy: 0
+N2 Terminates.
+1	N3	vacancy: 0
+1	N3	recv	N6	vacancy: 3
+1	N3	recv	N2	vacancy: 0
+3	N3	vacancy: 0
+3	N3	recv	N6	vacancy: 4
+3	N3	recv	N2	vacancy: 2
+4	N3	vacancy: 0
+4	N3	recv	N6	vacancy: 5
+4	N3	recv	N2	vacancy: 5
+7	N3	vacancy: 0
+7	N3	recv	N6	vacancy: 4
+7	N3	recv	N2	vacancy: 0
+N3 Terminates.
+N4 Terminates.
+3	N5	vacancy: 0
+3	N5	recv	N2	vacancy: 2
+3	N5	recv	N4	vacancy: 4
+3	N5	recv	N6	vacancy: 4
+4	N5	vacancy: 0
+4	N5	recv	N2	vacancy: 5
+4	N5	recv	N4	vacancy: 2
+4	N5	recv	N6	vacancy: 5
+N5 Terminates.
+N6 Terminates.
+Base Terminates.
+	TotalRunTime:10
+	totalRevdAlerts:0
+	totalRepliedAlert:0
+	totalUpdate:12
+	ignoredMessage:351
+	totalMsgSent:363

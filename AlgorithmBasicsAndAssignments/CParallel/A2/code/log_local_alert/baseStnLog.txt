@@ -1,0 +1,49 @@
+GRID:
+1  2  3  
+4  5  6  
+
+T	SRC	SD/RV	TYPE		DEST	INF
+======================================================================
+5	Base	recv	UPDATE		N1	vacancy: 1
+5	Base	recv	UPDATE		N2	vacancy: 3
+5	Base	recv	UPDATE		N3	vacancy: 4
+5	Base	recv	UPDATE		N4	vacancy: 0
+5	Base	recv	UPDATE		N5	vacancy: 1
+5	Base	recv	UPDATE		N6	vacancy: 3
+8	Base	recv	ALERT		N6	msg_exchanged: 8
+8	Base	send	ENQUIRY		N1
+8	Base	recv	EN_RESPONSE	N1	vacancy: 3
+8	Base	send	ENQUIRY		N2
+8	Base	recv	EN_RESPONSE	N2	vacancy: 2
+8	Base	send	ENQUIRY		N3
+8	Base	recv	EN_RESPONSE	N3	vacancy: 0
+8	Base	send	ENQUIRY		N4
+8	Base	recv	EN_RESPONSE	N4	vacancy: 4
+8	Base	send	ENQUIRY		N5
+8	Base	recv	EN_RESPONSE	N5	vacancy: 0
+8	Base	send	AL_RESPONSE	N6	suggestNode: 4	vacancy: 4
+10	Base	recv	UPDATE		N1	vacancy: 0
+10	Base	recv	UPDATE		N2	vacancy: 0
+10	Base	recv	UPDATE		N3	vacancy: 2
+10	Base	recv	UPDATE		N4	vacancy: 4
+10	Base	recv	UPDATE		N5	vacancy: 3
+10	Base	recv	UPDATE		N6	vacancy: 3
+10	Base	send	TERMINATE	N1
+10	Base	recv	TOTAL_MSG	N1	37
+10	Base	send	TERMINATE	N2
+10	Base	recv	TOTAL_MSG	N2	48
+10	Base	send	TERMINATE	N3
+10	Base	recv	TOTAL_MSG	N3	38
+10	Base	send	TERMINATE	N4
+10	Base	recv	TOTAL_MSG	N4	36
+10	Base	send	TERMINATE	N5
+10	Base	recv	TOTAL_MSG	N5	50
+10	Base	send	TERMINATE	N6
+10	Base	recv	TOTAL_MSG	N6	36
+Base Terminates.
+	TotalRunTime:10
+	totalRevdAlerts:1
+	totalRepliedAlert:1
+	totalUpdate:12
+	ignoredMessage:351
+	totalMsgSent:365

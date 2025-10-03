@@ -1,0 +1,119 @@
+<html>
+
+    <head>
+        <title>Edit Task</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+        <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+        <script src="scripts/main.js"></script>
+        <script src="scripts/member.js"></script>
+        <script src="scripts/memberStorage.js"></script>
+        <link href="styles/popup.css" rel="stylesheet">
+        <link href="styles/style.css" rel="stylesheet">
+
+        <style>
+            .demo-layout-transparent {
+                background: url('https://external-preview.redd.it/e_WvRTzU3h8NRiSkXxtrDzSxL89fFBwXiSA-wTmvSCI.png?auto=webp&s=763b39be53f75339c6e7a95911345175709d2800') center / cover;
+            }
+
+            .demo-layout-transparent .mdl-layout__header,
+            .demo-layout-transparent .mdl-layout__drawer-button {
+                /* This background is dark, so we set text to white. */
+                color: white;
+            }
+        </style>
+    </head>
+
+    <body onload="presetAttribute();getMember()">
+        <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+            <div class="mdl-layout__drawer">
+                <span class="mdl-layout-title">Kanban Board</span>
+                <nav class="mdl-navigation">
+                    <a class="mdl-navigation__link" href="productBacklog.html"><b>Product Backlog</b></a>
+                    <a class="mdl-navigation__link" href="kanbanBoard.html">Kanban Board</a>
+                    <a class="mdl-navigation__link" href="burndownChart.html">Burndown Chart</a>
+                    <a class="mdl-navigation__link" href="./memberPage.html">Member Management</a>
+                    <a class="mdl-navigation__link" href="pastSprints.html">View Past Sprints</a>
+
+                </nav>
+            </div>
+
+            <!-- Uses a transparent header that draws on top of the layout's background -->
+            <div class="tab-form">
+                <div class="tab-body">
+                    <div class="signup active">
+                        <h2> Edit Task </h2>
+                        <div class="form-input">
+
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield&#45;&#45;floating-label">
+                                <section class="task_name">
+                                    <label for="task_name">Task Name:</label>
+                                    <input type="text" name="task_name" id="task_name">
+                                </section>
+                                <hr>
+
+                                <section class="task_tag">
+                                    <label for="task_tag">Tag:</label>
+                                    <select name="task_tag" id="task_tag">
+                                        <option value="ui">UI</option>
+                                        <option value="testing">Testing</option>
+                                        <option value="core_functionality">Core Functionality</option>
+                                    </select>
+                                </section>
+                                <hr>
+
+                                <section class="task_type">
+                                    <label for="task_type">Type:</label>
+                                    <select name="task_type" id="task_type">
+                                        <option value="user_story">User Story</option>
+                                        <option value="bug">Bug</option>
+                                    </select>
+                                </section>
+                                <hr>
+
+                                <section class="story_points">
+                                    <label for="story_points">Story Points:</label>
+                                    <input type="number" min="0" name="story_points" id="story_points" placeholder="0">
+                                </section>
+                                <hr>
+
+                                <section class="task_priority">
+                                    <label for="task_priority">Priority:</label>
+                                    <select name="task_priority" id="task_priority">
+                                        <option value="low">Low</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="high">High</option>
+                                        <option value="critical">Critical</option>
+                                    </select>
+                                </section>
+                                <hr>
+
+                                <section class="task_description">
+                                    <label for="task_description">Description</label>
+                                    <br>
+                                    <textarea id="task_description" name="task_description" rows="3" cols="40"></textarea>
+                                </section>
+                                <hr>
+
+                                <section class="submission">
+                                    <div class="form-input1">
+                                        <button onclick="editTask()"> Edit </button>
+                                    </div>
+                                </section>
+                                <section class="cancel">
+                                    <div class="form-input2">
+                                        <button onclick="returnBacklog()"> Cancel </button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="scripts/member.js"></script>
+        <script src="scripts/memberStorage.js"></script>
+        <script src="scripts/shared.js"></script>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
